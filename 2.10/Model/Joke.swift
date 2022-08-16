@@ -5,6 +5,11 @@
 //  Created by Александр on 11.08.2022.
 //
 
-struct Pun {
+struct Joke: Decodable {
+    let category: String?
+    let setup: String?
+    let delivery: String?
     
+    let flags: [String: Bool]?
 }
+

@@ -9,15 +9,13 @@ import UIKit
 
 class JokeCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet var setUpLabel: UILabel!
+    @IBOutlet var punchlineLabel: UILabel!
+    @IBOutlet var pepeImage: UIImageView!
+    
+    func configure(with joke: Joke) {
+        setUpLabel.text = joke.setup
+        punchlineLabel.text = joke.delivery ?? ""
+        pepeImage.image = UIImage(named: "pepe")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
